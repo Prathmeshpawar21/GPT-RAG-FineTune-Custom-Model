@@ -82,7 +82,11 @@ max-width: 2rem;
 
 
 
-
+@media (max-width: 768px) {
+    .stMainBlockContainer {
+        width: 94%;  /* Apply 94% width only on mobile devices */
+    }
+}
 
 
 </style>
