@@ -10,7 +10,7 @@ css = '''
 
 
 .stMainBlockContainer{
-width: 65%;
+width: 63%;
 }
 
 
@@ -46,7 +46,8 @@ padding: 0.5rem;
 padding: 1.5rem;
 }
 
-.bot{width: 93%;
+.bot{
+width: 93%;
     padding: 0 1.5rem;
     color: #fff;
     justify-items: left;
@@ -61,11 +62,22 @@ padding: 1.5rem;
     justify-content: flex-end;
     align-content: center;
 }
-.avatar img {
-  max-width: 30px;
-  max-height: 30px;
-  border-radius: 50%;
+
+.avatar_user{
+max-width: 2rem;
+  max-height: 2rem;
   object-fit: cover; 
+  margin-top: 0.5rem;
+}
+
+
+
+.avatar_bot{
+max-width: 2rem;
+  max-height: 2rem;
+  object-fit: cover; 
+  margin-top: 22px;
+  
 }
 
 
@@ -73,6 +85,7 @@ padding: 1.5rem;
 
 
 
+</style>
 
 
 
@@ -80,20 +93,26 @@ padding: 1.5rem;
 
 
 
+
+
+user_template = '''
+<div class="chat-message user">
+    <div class="message_user">{{MSG}}</div>
+    <div class="avatar_user">
+        <img src="https://i.ibb.co/kQ7m5W9/user-image.png">
+    </div>    
+</div>
+'''
+
+
 bot_template = '''
 <div class="chat-message bot">
-    <div class="avatar">
-        <img src="https://www.pngwing.com/en/free-png-dkjwv/" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
+    <div class="avatar_bot">
+        <img src="https://i.ibb.co/d55q7cM/bot-png.png">
     </div>
     <div class="message_bot">{{MSG}}</div>
 </div>
 '''
 
-user_template = '''
-<div class="chat-message user">
-    <div class="message_user">{{MSG}}</div>
-    <div class="avatar">
-        <img src="https://i.ibb.co/rdZC7LZ/Photo-logo-1.png">
-    </div>    
-</div>
-'''
+
+

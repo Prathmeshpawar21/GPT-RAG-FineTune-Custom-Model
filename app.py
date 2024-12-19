@@ -1,3 +1,4 @@
+import base64
 import os
 import streamlit as st
 from dotenv import load_dotenv
@@ -97,7 +98,7 @@ def handle_userinput(user_question):
 
 # Main function
 def main():
-    st.set_page_config(page_title="PDF QnA", page_icon="📚", layout="wide")
+    st.set_page_config(page_title="PDF QnA", page_icon="📜", layout="wide")
     st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
@@ -117,6 +118,7 @@ def main():
             accept_multiple_files=True,
             type=["pdf"]
         )
+
 
         if st.button("Process"):
             with st.spinner("Processing..."):
@@ -149,3 +151,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
