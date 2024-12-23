@@ -1,3 +1,4 @@
+# __python_version = 3.12.0
 import base64
 import os
 import streamlit as st
