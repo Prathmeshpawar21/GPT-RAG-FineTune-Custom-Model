@@ -148,7 +148,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
+.env/
+/.env
+.env
 # pytype static type analyzer
 .pytype/
 
@@ -170,5 +172,3 @@ images
 /newEnv
 /new
 /pythonTen
-.env/
-/.env
