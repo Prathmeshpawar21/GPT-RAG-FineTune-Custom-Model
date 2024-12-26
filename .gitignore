@@ -170,3 +170,5 @@ images
 /newEnv
 /new
 /pythonTen
+.env/
+/.env
