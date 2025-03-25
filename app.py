@@ -62,7 +62,7 @@ def get_conversation_chain(vector_store):
             st.error("Missing API key. Please check your environment variables.")
             return None
         
-        repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
+        repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
         llm = HuggingFaceEndpoint(
             repo_id=repo_id,
             max_length=128,
